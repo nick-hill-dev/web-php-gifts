@@ -1,0 +1,1 @@
+ALTER TABLE list ADD COLUMN visibility VARCHAR(50) NOT NULL DEFAULT('friends')

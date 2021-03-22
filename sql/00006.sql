@@ -1,0 +1,1 @@
+CREATE TABLE list_item_purchase (id BIGSERIAL PRIMARY KEY, gift_id BIGINT NOT NULL REFERENCES list_item (id) ON DELETE CASCADE, account_id BIGINT NOT NULL REFERENCES account (id) ON DELETE CASCADE, CONSTRAINT list_item_purchase_gift_id_account_id_key UNIQUE (gift_id, account_id))

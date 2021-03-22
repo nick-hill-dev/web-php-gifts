@@ -1,0 +1,1 @@
+CREATE TABLE friend_request (id BIGSERIAL PRIMARY KEY, requesting_friend_id BIGINT NOT NULL REFERENCES account (id) ON DELETE CASCADE, requested_friend_id BIGINT NOT NULL REFERENCES account (id) ON DELETE CASCADE, CONSTRAINT friend_request_requesting_friend_id_requested_friend_id_key UNIQUE (requesting_friend_id, requested_friend_id))

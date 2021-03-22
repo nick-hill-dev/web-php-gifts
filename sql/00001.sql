@@ -1,0 +1,1 @@
+CREATE TABLE account (id BIGSERIAL PRIMARY KEY, user_name VARCHAR(50) NOT NULL, email VARCHAR(250) NOT NULL, first_name VARCHAR(100) NOT NULL, last_name VARCHAR(100) NOT NULL, password VARCHAR(100) NOT NULL, CONSTRAINT user_user_name_key UNIQUE (user_name))

@@ -1,0 +1,31 @@
+RewriteEngine On
+
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://nickhill.dyndns.org/gifts [R,L]
+
+RewriteRule ^config.json/?$ - [F,L,NC]
+
+RewriteRule ^register/?$ register.php [NC,L]
+RewriteRule ^login/?$ login.php [NC,L]
+RewriteRule ^logout/?$ logout.php [NC,L]
+RewriteRule ^forgotPassword/?$ forgotPassword.php [NC,L]
+RewriteRule ^resetPassword/?$ changePassword.php?source=email [NC,L]
+RewriteRule ^myLists/?$ myLists.php [NC,L]
+RewriteRule ^lists/new/?$ createList.php [NC,L]
+RewriteRule ^lists/(\d+)/edit/?$ editList.php?listID=$1 [NC,L]
+RewriteRule ^lists/(\d+)/delete/?$ deleteList.php?listID=$1 [NC,L]
+RewriteRule ^lists/(\d+)/?$ list.php?id=$1 [NC,L]
+RewriteRule ^lists/(\d+)/gifts/new/?$ createGift.php?listID=$1 [NC,L]
+RewriteRule ^lists/(\d+)/gifts/(\d+)/?$ gift.php?id=$2 [NC,L]
+RewriteRule ^lists/(\d+)/gifts/(\d+)/copy/?$ copyGift.php?giftID=$2 [NC,L]
+RewriteRule ^lists/(\d+)/gifts/(\d+)/purchased/?$ purchaseGift.php?giftID=$2 [NC,L]
+RewriteRule ^lists/(\d+)/gifts/(\d+)/unpurchased/?$ unpurchaseGift.php?giftID=$2 [NC,L]
+RewriteRule ^lists/(\d+)/gifts/(\d+)/delete/?$ deleteGift.php?listID=$1&giftID=$2 [NC,L]
+RewriteRule ^lists/(\d+)/gifts/(\d+)/edit/?$ editGift.php?giftID=$2 [NC,L]
+RewriteRule ^lists/(\d+)/gifts/(\d+)/links/(\d+)/delete/?$ deleteGiftLink.php?listID=$1&giftID=$2&linkID=$3 [NC,L]
+RewriteRule ^friends/add/?$ findFriend.php [NC,L]
+RewriteRule ^friends/add/(\d+)/?$ addFriend.php?friendID=$1 [NC,L]
+RewriteRule ^friends/confirm/(\d+)/?$ confirmFriend.php?friendID=$1 [NC,L]
+RewriteRule ^friends/deny/(\d+)/?$ denyFriendRequest.php?friendID=$1 [NC,L]
+RewriteRule ^friends/cancel/(\d+)/?$ cancelFriendRequest.php?friendID=$1 [NC,L]
+RewriteRule ^friends/(\d+)/unfriend/?$ unfriend.php?friendID=$1 [NC,L]

@@ -1,0 +1,20 @@
+{
+    "databaseName": "{{value}}",
+    "databaseUser": "{{value}}",
+    "databasePassword": "{{value}}",
+    "baseUrl": "{{value}}",
+    "email": {
+    	"host": "{{value}}",
+        "port": {{value}},
+        "userName": "{{value}}",
+        "password": "{{value}}",
+        "fromName": "{{value}}",
+        "fromAddress": "{{value}}"
+    },
+    "searchBrands": [
+        {
+            "label": "{{value}}",
+            "urlFormat": "{{value}}"
+        }
+    ]
+}

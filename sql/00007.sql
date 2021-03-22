@@ -1,0 +1,1 @@
+ALTER TABLE list_item_link ALTER COLUMN page_title TYPE text
